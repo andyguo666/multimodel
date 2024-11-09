@@ -3,8 +3,8 @@
 """
 @Author : andy
 @Date   : 2024/11/8 12:54
-@Contact: 864934027@qq.com 
-@File   : test_file.py 
+@Contact: 864934027@qq.com
+@File   : test_file.py
 """
 import os
 import cv2
@@ -29,7 +29,7 @@ from vbench.third_party.RAFT.core.utils_core.utils import InputPadder
 CUR_DIR = os.path.dirname(os.path.abspath(__file__))
 DEVICE = 'cuda'
 
-# change
+
 class StaticFilter:
     def __init__(self, args, device):
         self.args = args

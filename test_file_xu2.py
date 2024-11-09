@@ -29,7 +29,7 @@ from vbench.third_party.RAFT.core.utils_core.utils import InputPadder
 CUR_DIR = os.path.dirname(os.path.abspath(__file__))
 DEVICE = 'cuda'
 
-# change
+
 class StaticFilter:
     def __init__(self, args, device):
         self.args = args

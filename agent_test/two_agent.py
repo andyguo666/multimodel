@@ -1,3 +1,24 @@
+from zhipuai import ZhipuAI
+def invoke_api(prompt):
+    ZHIPU_API_KEY = "xxxx"
+    from zhipuai import ZhipuAI
+    client = ZhipuAI(api_key=ZHIPU_API_KEY)
+    model = "glm-4"  
+    response = client.chat.completions.create(
+        model=model,
+        messages=[
+            {"role": "user", "content": prompt},
+        ],
+        stream=False,
+        temperature=0.1,
+        top_p=0.1,
+        max_tokens=4096,
+        # request_id=request_id
+    )
+    answer = response.choices[0].message.content
+    return answer
+
+
 # glm4模型跑一遍
 class AI_Agent:
     def __init__(self, name, system_setting):
